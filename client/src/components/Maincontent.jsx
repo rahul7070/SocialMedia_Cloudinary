@@ -26,7 +26,7 @@ export default function Maincontent() {
       try {
         // Make API call to upload file to Cloudinary
         const response = await axios.post(
-          "http://localhost:8000/media/upload",
+          "https://kind-tan-scallop-tie.cyclic.app/media/upload",
           formData
         );
         console.log("File uploaded successfully:", response.data);
@@ -46,7 +46,7 @@ export default function Maincontent() {
   }, []);
 
   async function fetchData() {
-    fetch("http://localhost:8000/media")
+    fetch("https://kind-tan-scallop-tie.cyclic.app/media")
       .then((res) => {
         if (res.ok) {
           return res.json();
